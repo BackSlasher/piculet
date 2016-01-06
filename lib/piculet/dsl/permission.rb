@@ -4,6 +4,7 @@ module Piculet
       class SecurityGroup
         class Permissions
           class Permission
+            include Logger::ClientHelper
             include Piculet::TemplateHelper
 
             def initialize(context, security_group, direction, protocol_prot_range, &block)

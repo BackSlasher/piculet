@@ -55,7 +55,7 @@ module Piculet
 
             def groups(*values)
               if values.empty?
-                raise ArgumentError, "SecurityGroup `#{@security_group}`: #{@direction}: #{@protocol_prot_range}: `groups`: wrong number of arguments (0 for 1..)"
+                log(:warn, "SecurityGroup `#{@security_group}`: #{@direction}: #{@protocol_prot_range}: `groups` contains no groups ", :yellow)
               end
 
               values.each do |group|
